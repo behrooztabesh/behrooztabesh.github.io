@@ -1,0 +1,245 @@
+{
+  "info": {
+    "title": "Animal Tracker",
+    "version": "1.0.0",
+    "description": "",
+    "contact": {
+      "name": "",
+      "url": ""
+    }
+  },
+  "swagger": "2.0",
+  "paths": {
+    "/api/v2/assetFeed/{interval}/{partner_id}/{media_id}/{timezone}/{all}": {
+      "post": {
+        "tags": [
+          "assetFeed"
+        ],
+        "summary": "Getting list of asset feeds",
+        "description": "Getting list of all the harvesters",
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "interval",
+            "in": "path",
+            "description": "Interval has to be a integer and valid values are between 1-920hrs.",
+            "example": "interval=24",
+            "type": "string"
+          },
+          {
+            "name": "partner_id",
+            "in": "path",
+            "description": "partner id",
+            "example": "partner_id=802_14_3478934",
+            "type": "string"
+          },
+          {
+            "name": "media_id",
+            "in": "path",
+            "description": "media id",
+            "example": "media_id=_0GX8FCMGk5U_z5KzTtVXhJZIAJ3pnmx",
+            "type": "string"
+          },
+          {
+            "name": "timezone",
+            "in": "path",
+            "description": "time zone",
+            "example": "timezone=PT",
+            "type": "string"
+          },
+          {
+            "name": "all",
+            "in": "path",
+            "description": "all",
+            "example": "all=true",
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "successful operation",
+            "schema": {
+              "type": "object",
+              "$ref": "#/definitions/Assets"
+            }
+          }
+        }
+      }
+    },
+    "/api/v2/ingestAsset": {
+      "post": {
+        "tags": [
+          "ingestAsset"
+        ],
+        "summary": "Getting list of asset feeds",
+        "description": "Getting list of all the harvesters",
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "$ref": "#/parameters/episodeFlag"
+          },
+          {
+            "$ref": "#/parameters/episodeNumber"
+          },
+          {
+            "$ref": "#/parameters/liveChannel"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "successful operation",
+            "schema": {
+              "type": "object",
+              "$ref": "#/definitions/Assets"
+            }
+          }
+        }
+      }
+    }
+  },
+  "definitions": {
+    "Assets": {
+      "type": "object",
+      "properties": {
+        "total_count": {
+          "type": "integer",
+          "format": "int64"
+        },
+        "assets": {
+          "schema": null,
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "partner_id": {
+                "type": "string",
+                "default": "802_14_3478934"
+              },
+              "id": {
+                "type": "string",
+                "default": "1840109123828"
+              },
+              "guid": {
+                "type": "string",
+                "default": "_0GX8FCMGk5U_z5KzTtVXhJZIAJ3pnmx"
+              },
+              "create_time": {
+                "type": "string",
+                "format": "date",
+                "default": "2021-01-04 14:41:37"
+              },
+              "brand": {
+                "type": "string",
+                "default": "smithsonian"
+              },
+              "episode_number": {
+                "type": "string",
+                "default": "1"
+              },
+              "production_number": {
+                "type": "string",
+                "default": "1"
+              },
+              "primary_category_id": {
+                "type": "string",
+                "default": "1718968899518"
+              },
+              "primary_category_name": {
+                "type": "string",
+                "default": "Syndicated/Smithsonian/Air Disasters/Full Episodes"
+              },
+              "metadata": {
+                "type": "boolean",
+                "default": false
+              },
+              "captions": {
+                "type": "boolean",
+                "default": false
+              },
+              "audio": {
+                "type": "boolean",
+                "default": false
+              },
+              "video": {
+                "type": "boolean",
+                "default": false
+              },
+              "thumbnail": {
+                "type": "boolean",
+                "default": false
+              },
+              "posterart": {
+                "type": "boolean",
+                "default": false
+              },
+              "video_replacement": {
+                "type": "boolean",
+                "default": false
+              },
+              "delta_replacement": {
+                "type": "boolean",
+                "default": false
+              },
+              "metadata_replacement": {
+                "type": "boolean",
+                "default": false
+              },
+              "xml": {
+                "name": "Asset"
+              }
+            }
+          }
+        }
+      },
+      "xml": {
+        "name": "Order"
+      }
+    }
+  },
+  "responses": {},
+  "parameters": {
+    "episodeFlag": {
+      "name": "episodeFlag",
+      "in": "query",
+      "description": "Episode Flag",
+      "example": "episodeFlag=true",
+      "type": "boolean"
+    },
+    "episodeNumber": {
+      "name": "episodeNumber",
+      "in": "query",
+      "description": "episodeNumber",
+      "example": "episodeNumber=1",
+      "type": "number"
+    },
+    "liveChannel": {
+      "in": "query",
+      "name": "liveChannel",
+      "schema": {
+        "type": "object",
+        "properties": {
+          "partner_id": {
+            "type": "string",
+            "default": "802_14_3478934"
+          },
+          "id": {
+            "type": "string",
+            "default": "1840109123828"
+          }
+        }
+      }
+    }
+  },
+  "securityDefinitions": {},
+  "tags": []
+}

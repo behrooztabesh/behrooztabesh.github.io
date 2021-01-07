@@ -1,0 +1,20 @@
+{
+  "name": "video-robot-documentation",
+  "version": "1.0.0",
+  "description": "temp vr-doc repo for propose of testing",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "spectacle -d ./test.json"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/behrooztabesh/vr-doc.github.io.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/behrooztabesh/vr-doc.github.io/issues"
+  },
+  "homepage": "https://github.com/behrooztabesh/vr-doc.github.io#readme"
+}
