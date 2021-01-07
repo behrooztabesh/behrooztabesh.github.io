@@ -1,0 +1,598 @@
+<!doctype html>
+<html class="no-js" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Animal Tracker | API Reference</title>
+    <link rel="stylesheet" href="stylesheets/foundation.min.css" />
+    <link rel="stylesheet" href="stylesheets/spectacle.min.css" />
+    <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+    <!-- <script src="javascripts/foundation.js"></script> -->
+    <script src="javascripts/spectacle.min.js"></script>
+  </head>
+  <body id="spectacle">
+    <div id="page" class="drawer-layout drawer-slide-right-large">
+      <div id="sidebar">
+        <button class="close-button" aria-label="Close menu" type="button" data-drawer-close>
+          <span aria-hidden="true">×</span>
+        </button>
+        <nav id="nav" role="navigation">
+          <h5>Topics</h5>
+          <a href="#introduction">Introduction</a>
+          <a href="#authentication">Authentication</a>
+          <h5>Operations</h5>
+          <section>
+            <a href="#tag-assetFeed">assetFeed</a>
+            <ul>
+              <li>
+                <a href="#operation--api-v2-assetFeed--interval---partner_id---media_id---timezone---all--post"> Getting list of asset feeds </a>
+              </li>
+            </ul>
+          </section>
+          <section>
+            <a href="#tag-ingestAsset">ingestAsset</a>
+            <ul>
+              <li>
+                <a href="#operation--api-v2-ingestAsset-post"> Getting list of asset feeds </a>
+              </li>
+            </ul>
+          </section>
+          <h5>Schema Definitions</h5>
+          <a href="#definition-Assets"> Assets </a>
+        </nav>
+      </div>
+      <div id="docs" class="row collapse expanded drawer" data-drawer>
+        <button class="floating-menu-icon" type="button" data-drawer-slide="right">
+          <span class="hamburger"></span>
+        </button>
+        <div class="example-box doc-content"></div>
+        <article>
+          <h1 class="doc-title">Animal Tracker
+            <span>API Reference</span>
+          </h1>
+          <div id="introduction" data-traverse-target="introduction">
+            <div class="doc-row">
+              <div class="doc-copy"> </div>
+              <div class="doc-examples">
+                <section>
+                  <h5>Version:
+                    <span>1.0.0</span>
+                  </h5>
+                </section>
+              </div>
+            </div>
+          </div>
+          <!-- <h1 id="security" data-traverse-target="security">Security</h1> -->
+          <h1 id="authentication" data-traverse-target="authentication">Authentication</h1>
+          <h1 id="tag-assetFeed" class="swagger-summary-tag" data-traverse-target="tag-assetFeed">assetFeed</h1>
+          <div id="operation--api-v2-assetFeed--interval---partner_id---media_id---timezone---all--post" class="operation panel" data-traverse-target="operation--api-v2-assetFeed--interval---partner_id---media_id---timezone---all--post">
+            <!-- <section class="operation-tags row"> -->
+            <!-- <div class="doc-copy"> -->
+            <div class="operation-tags">
+              <a class="label" href="#tag-assetFeed">assetFeed</a>
+              <!---->
+            </div>
+            <!-- </div> -->
+            <!-- </section> -->
+            <h2 class="operation-title">
+              <span class="operation-summary">Getting list of asset feeds</span>
+            </h2>
+            <div class="doc-row">
+              <div class="doc-copy">
+                <section class="swagger-operation-path">
+                  <span class="operation-method">POST</span>
+                  <span class="operation-path">/api/v2/assetFeed/{interval}/{partner_id}/{media_id}/{timezone}/{all}</span>
+                </section>
+              </div>
+            </div>
+            <div class="doc-row">
+              <div class="doc-copy">
+                <section class="swagger-operation-description">
+                  <p>Getting list of all the harvesters</p>
+                </section>
+              </div>
+            </div>
+            <div class="doc-row">
+              <div class="doc-copy">
+                <section class="swagger-request-params">
+                  <div class="prop-row prop-group">
+                    <div class="prop-name">
+                      <div class="prop-title">interval:
+                        <span class="prop-type">
+                          <span class="json-property-type">string</span>
+                          <span class="json-property-range" title="Value limits"></span>
+                        </span>
+                      </div>
+                      <div class="prop-subtitle"> in path </div>
+                    </div>
+                    <div class="prop-value">
+                      <p>Interval has to be a integer and valid values are between 1-920hrs.</p>
+                    </div>
+                  </div>
+                  <div class="prop-row prop-group">
+                    <div class="prop-name">
+                      <div class="prop-title">partner_id:
+                        <span class="prop-type">
+                          <span class="json-property-type">string</span>
+                          <span class="json-property-range" title="Value limits"></span>
+                        </span>
+                      </div>
+                      <div class="prop-subtitle"> in path </div>
+                    </div>
+                    <div class="prop-value">
+                      <p>partner id</p>
+                    </div>
+                  </div>
+                  <div class="prop-row prop-group">
+                    <div class="prop-name">
+                      <div class="prop-title">media_id:
+                        <span class="prop-type">
+                          <span class="json-property-type">string</span>
+                          <span class="json-property-range" title="Value limits"></span>
+                        </span>
+                      </div>
+                      <div class="prop-subtitle"> in path </div>
+                    </div>
+                    <div class="prop-value">
+                      <p>media id</p>
+                    </div>
+                  </div>
+                  <div class="prop-row prop-group">
+                    <div class="prop-name">
+                      <div class="prop-title">timezone:
+                        <span class="prop-type">
+                          <span class="json-property-type">string</span>
+                          <span class="json-property-range" title="Value limits"></span>
+                        </span>
+                      </div>
+                      <div class="prop-subtitle"> in path </div>
+                    </div>
+                    <div class="prop-value">
+                      <p>time zone</p>
+                    </div>
+                  </div>
+                  <div class="prop-row prop-group">
+                    <div class="prop-name">
+                      <div class="prop-title">all:
+                        <span class="prop-type">
+                          <span class="json-property-type">string</span>
+                          <span class="json-property-range" title="Value limits"></span>
+                        </span>
+                      </div>
+                      <div class="prop-subtitle"> in path </div>
+                    </div>
+                    <div class="prop-value">
+                      <p>all</p>
+                    </div>
+                  </div>
+                </section>
+              </div>
+              <div class="doc-examples"></div>
+            </div>
+            <div class="doc-row">
+              <div class="doc-copy">
+                <section class="swagger-responses">
+                  <div class="prop-row prop-group">
+                    <div class="prop-name">
+                      <div class="prop-title">200 OK</div>
+                      <div class="prop-ref">
+                        <span class="json-schema-ref-object">
+                          <a class="json-schema-ref" href="#/definitions/Assets">Assets</a>
+                        </span>
+                      </div>
+                      <!-- <span class="swagger-global"></span> <span class="json-schema-reference"><a href=""></a></span> -->
+                    </div>
+                    <div class="prop-value">
+                      <p>successful operation</p>
+                    </div>
+                  </div>
+                  <div class="prop-row prop-inner">
+                    <div class="prop-name">type</div>
+                    <div class="prop-value">
+                      <span class="json-property-type">
+                        <span class="json-schema-ref-object">
+                          <a class="json-schema-ref" href="#/definitions/Assets">Assets</a>
+                        </span>
+                      </span>
+                      <span class="json-property-range" title="Value limits"></span>
+                    </div>
+                  </div>
+                </section>
+              </div>
+              <div class="doc-examples">
+                <h5>Response Content-Types:
+                  <span>application/json</span>
+                </h5>
+                <section>
+                  <h5>Response Example
+                    <span>(200 OK)</span>
+                  </h5>
+                  <!-- <div class="hljs"> -->
+                  <html>
+                  <head></head>
+                  <body><pre><code class="hljs language-json">{
+  <span class="hljs-attr">"total_count"</span>: <span class="hljs-string">"integer (int64)"</span>,
+  <span class="hljs-attr">"assets"</span>: [
+    {
+      <span class="hljs-attr">"partner_id"</span>: <span class="hljs-string">"string"</span>,
+      <span class="hljs-attr">"id"</span>: <span class="hljs-string">"string"</span>,
+      <span class="hljs-attr">"guid"</span>: <span class="hljs-string">"string"</span>,
+      <span class="hljs-attr">"create_time"</span>: <span class="hljs-string">"string (date)"</span>,
+      <span class="hljs-attr">"brand"</span>: <span class="hljs-string">"string"</span>,
+      <span class="hljs-attr">"episode_number"</span>: <span class="hljs-string">"string"</span>,
+      <span class="hljs-attr">"production_number"</span>: <span class="hljs-string">"string"</span>,
+      <span class="hljs-attr">"primary_category_id"</span>: <span class="hljs-string">"string"</span>,
+      <span class="hljs-attr">"primary_category_name"</span>: <span class="hljs-string">"string"</span>,
+      <span class="hljs-attr">"metadata"</span>: <span class="hljs-string">"boolean"</span>,
+      <span class="hljs-attr">"captions"</span>: <span class="hljs-string">"boolean"</span>,
+      <span class="hljs-attr">"audio"</span>: <span class="hljs-string">"boolean"</span>,
+      <span class="hljs-attr">"video"</span>: <span class="hljs-string">"boolean"</span>,
+      <span class="hljs-attr">"thumbnail"</span>: <span class="hljs-string">"boolean"</span>,
+      <span class="hljs-attr">"posterart"</span>: <span class="hljs-string">"boolean"</span>,
+      <span class="hljs-attr">"video_replacement"</span>: <span class="hljs-string">"boolean"</span>,
+      <span class="hljs-attr">"delta_replacement"</span>: <span class="hljs-string">"boolean"</span>,
+      <span class="hljs-attr">"metadata_replacement"</span>: <span class="hljs-string">"boolean"</span>
+    }
+  ]
+}
+</code></pre> </body>
+                  </html>
+                  <!-- </div> -->
+                </section>
+              </div>
+            </div>
+          </div>
+          <h1 id="tag-ingestAsset" class="swagger-summary-tag" data-traverse-target="tag-ingestAsset">ingestAsset</h1>
+          <div id="operation--api-v2-ingestAsset-post" class="operation panel" data-traverse-target="operation--api-v2-ingestAsset-post">
+            <!-- <section class="operation-tags row"> -->
+            <!-- <div class="doc-copy"> -->
+            <div class="operation-tags">
+              <a class="label" href="#tag-ingestAsset">ingestAsset</a>
+              <!---->
+            </div>
+            <!-- </div> -->
+            <!-- </section> -->
+            <h2 class="operation-title">
+              <span class="operation-summary">Getting list of asset feeds</span>
+            </h2>
+            <div class="doc-row">
+              <div class="doc-copy">
+                <section class="swagger-operation-path">
+                  <span class="operation-method">POST</span>
+                  <span class="operation-path">/api/v2/ingestAsset</span>
+                </section>
+              </div>
+            </div>
+            <div class="doc-row">
+              <div class="doc-copy">
+                <section class="swagger-operation-description">
+                  <p>Getting list of all the harvesters</p>
+                </section>
+              </div>
+            </div>
+            <div class="doc-row">
+              <div class="doc-copy">
+                <section class="swagger-request-params">
+                  <div class="prop-row prop-group">
+                    <div class="prop-name">
+                      <div class="prop-title">episodeFlag:
+                        <span class="prop-type">
+                          <span class="json-property-type">boolean</span>
+                          <span class="json-property-range" title="Value limits"></span>
+                        </span>
+                      </div>
+                      <div class="prop-subtitle"> in query </div>
+                    </div>
+                    <div class="prop-value">
+                      <p>Episode Flag</p>
+                    </div>
+                  </div>
+                  <div class="prop-row prop-group">
+                    <div class="prop-name">
+                      <div class="prop-title">episodeNumber:
+                        <span class="prop-type">
+                          <span class="json-property-type">number</span>
+                          <span class="json-property-range" title="Value limits"></span>
+                        </span>
+                      </div>
+                      <div class="prop-subtitle"> in query </div>
+                    </div>
+                    <div class="prop-value">
+                      <p>episodeNumber</p>
+                    </div>
+                  </div>
+                  <div class="prop-row prop-group">
+                    <div class="prop-name">
+                      <div class="prop-title">liveChannel:
+                        <span class="prop-type">
+                          <span class="json-property-type">object</span>
+                          <span class="json-property-range" title="Value limits"></span>
+                        </span>
+                      </div>
+                      <div class="prop-subtitle"> in query </div>
+                    </div>
+                    <div class="prop-value">
+                      <p class="no-description">(no description)</p>
+                    </div>
+                  </div>
+                </section>
+              </div>
+              <div class="doc-examples"></div>
+            </div>
+            <div class="doc-row">
+              <div class="doc-copy">
+                <section class="swagger-responses">
+                  <div class="prop-row prop-group">
+                    <div class="prop-name">
+                      <div class="prop-title">200 OK</div>
+                      <div class="prop-ref">
+                        <span class="json-schema-ref-object">
+                          <a class="json-schema-ref" href="#/definitions/Assets">Assets</a>
+                        </span>
+                      </div>
+                      <!-- <span class="swagger-global"></span> <span class="json-schema-reference"><a href=""></a></span> -->
+                    </div>
+                    <div class="prop-value">
+                      <p>successful operation</p>
+                    </div>
+                  </div>
+                  <div class="prop-row prop-inner">
+                    <div class="prop-name">type</div>
+                    <div class="prop-value">
+                      <span class="json-property-type">
+                        <span class="json-schema-ref-object">
+                          <a class="json-schema-ref" href="#/definitions/Assets">Assets</a>
+                        </span>
+                      </span>
+                      <span class="json-property-range" title="Value limits"></span>
+                    </div>
+                  </div>
+                </section>
+              </div>
+              <div class="doc-examples">
+                <h5>Response Content-Types:
+                  <span>application/json</span>
+                </h5>
+                <section>
+                  <h5>Response Example
+                    <span>(200 OK)</span>
+                  </h5>
+                  <!-- <div class="hljs"> -->
+                  <html>
+                  <head></head>
+                  <body><pre><code class="hljs language-json">{
+  <span class="hljs-attr">"total_count"</span>: <span class="hljs-string">"integer (int64)"</span>,
+  <span class="hljs-attr">"assets"</span>: [
+    {
+      <span class="hljs-attr">"partner_id"</span>: <span class="hljs-string">"string"</span>,
+      <span class="hljs-attr">"id"</span>: <span class="hljs-string">"string"</span>,
+      <span class="hljs-attr">"guid"</span>: <span class="hljs-string">"string"</span>,
+      <span class="hljs-attr">"create_time"</span>: <span class="hljs-string">"string (date)"</span>,
+      <span class="hljs-attr">"brand"</span>: <span class="hljs-string">"string"</span>,
+      <span class="hljs-attr">"episode_number"</span>: <span class="hljs-string">"string"</span>,
+      <span class="hljs-attr">"production_number"</span>: <span class="hljs-string">"string"</span>,
+      <span class="hljs-attr">"primary_category_id"</span>: <span class="hljs-string">"string"</span>,
+      <span class="hljs-attr">"primary_category_name"</span>: <span class="hljs-string">"string"</span>,
+      <span class="hljs-attr">"metadata"</span>: <span class="hljs-string">"boolean"</span>,
+      <span class="hljs-attr">"captions"</span>: <span class="hljs-string">"boolean"</span>,
+      <span class="hljs-attr">"audio"</span>: <span class="hljs-string">"boolean"</span>,
+      <span class="hljs-attr">"video"</span>: <span class="hljs-string">"boolean"</span>,
+      <span class="hljs-attr">"thumbnail"</span>: <span class="hljs-string">"boolean"</span>,
+      <span class="hljs-attr">"posterart"</span>: <span class="hljs-string">"boolean"</span>,
+      <span class="hljs-attr">"video_replacement"</span>: <span class="hljs-string">"boolean"</span>,
+      <span class="hljs-attr">"delta_replacement"</span>: <span class="hljs-string">"boolean"</span>,
+      <span class="hljs-attr">"metadata_replacement"</span>: <span class="hljs-string">"boolean"</span>
+    }
+  ]
+}
+</code></pre> </body>
+                  </html>
+                  <!-- </div> -->
+                </section>
+              </div>
+            </div>
+          </div>
+          <h1>Schema Definitions</h1>
+          <div id="definition-Assets" class="definition panel" data-traverse-target="definition-Assets">
+            <h2 class="panel-title">
+              <a name="/definitions/Assets"></a>Assets: object
+              <!-- <span class="json-property-type"><span class="json-property-type">object</span>
+              <span class="json-property-range" title="Value limits"></span>
+              
+              
+              </span> -->
+            </h2>
+            <div class="doc-row">
+              <div class="doc-copy">
+                <section class="json-schema-properties">
+                  <dl>
+                    <dt data-property-name="total_count">
+                      <span class="json-property-name">total_count:</span>
+                      <span class="json-property-type">integer</span>
+                      <span class="json-property-format">(int64)</span>
+                      <span class="json-property-range" title="Value limits"></span>
+                    </dt>
+                    <dt data-property-name="assets">
+                      <span class="json-property-name">assets:</span>
+                      <span class="json-property-type">object[]</span>
+                      <span class="json-property-range" title="Value limits"></span>
+                    </dt>
+                    <dt class="json-inner-schema">
+                      <section class="json-schema-array-items">
+                        <span class="json-property-type">object</span>
+                        <span class="json-property-range" title="Value limits"></span>
+                        <div class="json-inner-schema">
+                          <section class="json-schema-properties">
+                            <dl>
+                              <dt data-property-name="partner_id">
+                                <span class="json-property-name">partner_id:</span>
+                                <span class="json-property-type">string</span>
+                                <span class="json-property-range" title="Value limits"></span>
+                                <span class="json-property-default-value" title="Default value">802_14_3478934</span>
+                              </dt>
+                              <dt data-property-name="id">
+                                <span class="json-property-name">id:</span>
+                                <span class="json-property-type">string</span>
+                                <span class="json-property-range" title="Value limits"></span>
+                                <span class="json-property-default-value" title="Default value">1840109123828</span>
+                              </dt>
+                              <dt data-property-name="guid">
+                                <span class="json-property-name">guid:</span>
+                                <span class="json-property-type">string</span>
+                                <span class="json-property-range" title="Value limits"></span>
+                                <span class="json-property-default-value" title="Default value">_0GX8FCMGk5U_z5KzTtVXhJZIAJ3pnmx</span>
+                              </dt>
+                              <dt data-property-name="create_time">
+                                <span class="json-property-name">create_time:</span>
+                                <span class="json-property-type">string</span>
+                                <span class="json-property-format">(date)</span>
+                                <span class="json-property-range" title="Value limits"></span>
+                                <span class="json-property-default-value" title="Default value">2021-01-04 14:41:37</span>
+                              </dt>
+                              <dt data-property-name="brand">
+                                <span class="json-property-name">brand:</span>
+                                <span class="json-property-type">string</span>
+                                <span class="json-property-range" title="Value limits"></span>
+                                <span class="json-property-default-value" title="Default value">smithsonian</span>
+                              </dt>
+                              <dt data-property-name="episode_number">
+                                <span class="json-property-name">episode_number:</span>
+                                <span class="json-property-type">string</span>
+                                <span class="json-property-range" title="Value limits"></span>
+                                <span class="json-property-default-value" title="Default value">1</span>
+                              </dt>
+                              <dt data-property-name="production_number">
+                                <span class="json-property-name">production_number:</span>
+                                <span class="json-property-type">string</span>
+                                <span class="json-property-range" title="Value limits"></span>
+                                <span class="json-property-default-value" title="Default value">1</span>
+                              </dt>
+                              <dt data-property-name="primary_category_id">
+                                <span class="json-property-name">primary_category_id:</span>
+                                <span class="json-property-type">string</span>
+                                <span class="json-property-range" title="Value limits"></span>
+                                <span class="json-property-default-value" title="Default value">1718968899518</span>
+                              </dt>
+                              <dt data-property-name="primary_category_name">
+                                <span class="json-property-name">primary_category_name:</span>
+                                <span class="json-property-type">string</span>
+                                <span class="json-property-range" title="Value limits"></span>
+                                <span class="json-property-default-value" title="Default value">Syndicated/Smithsonian/Air Disasters/Full Episodes</span>
+                              </dt>
+                              <dt data-property-name="metadata">
+                                <span class="json-property-name">metadata:</span>
+                                <span class="json-property-type">boolean</span>
+                                <span class="json-property-range" title="Value limits"></span>
+                                <span class="json-property-default-value" title="Default value">false</span>
+                              </dt>
+                              <dt data-property-name="captions">
+                                <span class="json-property-name">captions:</span>
+                                <span class="json-property-type">boolean</span>
+                                <span class="json-property-range" title="Value limits"></span>
+                                <span class="json-property-default-value" title="Default value">false</span>
+                              </dt>
+                              <dt data-property-name="audio">
+                                <span class="json-property-name">audio:</span>
+                                <span class="json-property-type">boolean</span>
+                                <span class="json-property-range" title="Value limits"></span>
+                                <span class="json-property-default-value" title="Default value">false</span>
+                              </dt>
+                              <dt data-property-name="video">
+                                <span class="json-property-name">video:</span>
+                                <span class="json-property-type">boolean</span>
+                                <span class="json-property-range" title="Value limits"></span>
+                                <span class="json-property-default-value" title="Default value">false</span>
+                              </dt>
+                              <dt data-property-name="thumbnail">
+                                <span class="json-property-name">thumbnail:</span>
+                                <span class="json-property-type">boolean</span>
+                                <span class="json-property-range" title="Value limits"></span>
+                                <span class="json-property-default-value" title="Default value">false</span>
+                              </dt>
+                              <dt data-property-name="posterart">
+                                <span class="json-property-name">posterart:</span>
+                                <span class="json-property-type">boolean</span>
+                                <span class="json-property-range" title="Value limits"></span>
+                                <span class="json-property-default-value" title="Default value">false</span>
+                              </dt>
+                              <dt data-property-name="video_replacement">
+                                <span class="json-property-name">video_replacement:</span>
+                                <span class="json-property-type">boolean</span>
+                                <span class="json-property-range" title="Value limits"></span>
+                                <span class="json-property-default-value" title="Default value">false</span>
+                              </dt>
+                              <dt data-property-name="delta_replacement">
+                                <span class="json-property-name">delta_replacement:</span>
+                                <span class="json-property-type">boolean</span>
+                                <span class="json-property-range" title="Value limits"></span>
+                                <span class="json-property-default-value" title="Default value">false</span>
+                              </dt>
+                              <dt data-property-name="metadata_replacement">
+                                <span class="json-property-name">metadata_replacement:</span>
+                                <span class="json-property-type">boolean</span>
+                                <span class="json-property-range" title="Value limits"></span>
+                                <span class="json-property-default-value" title="Default value">false</span>
+                              </dt>
+                              <dt data-property-name="xml">
+                                <span class="json-property-name">xml:</span>
+                                <span class="json-property-type">object</span>
+                                <span class="json-property-range" title="Value limits"></span>
+                              </dt>
+                            </dl>
+                          </section>
+                        </div>
+                      </section>
+                    </dt>
+                  </dl>
+                </section>
+              </div>
+              <div class="doc-examples">
+                <section>
+                  <h5>Example</h5>
+                  <!-- <div class="hljs"> -->
+                  <html>
+                  <head></head>
+                  <body><pre><code class="hljs language-json">{
+  <span class="hljs-attr">"total_count"</span>: <span class="hljs-string">"integer (int64)"</span>,
+  <span class="hljs-attr">"assets"</span>: [
+    {
+      <span class="hljs-attr">"partner_id"</span>: <span class="hljs-string">"string"</span>,
+      <span class="hljs-attr">"id"</span>: <span class="hljs-string">"string"</span>,
+      <span class="hljs-attr">"guid"</span>: <span class="hljs-string">"string"</span>,
+      <span class="hljs-attr">"create_time"</span>: <span class="hljs-string">"string (date)"</span>,
+      <span class="hljs-attr">"brand"</span>: <span class="hljs-string">"string"</span>,
+      <span class="hljs-attr">"episode_number"</span>: <span class="hljs-string">"string"</span>,
+      <span class="hljs-attr">"production_number"</span>: <span class="hljs-string">"string"</span>,
+      <span class="hljs-attr">"primary_category_id"</span>: <span class="hljs-string">"string"</span>,
+      <span class="hljs-attr">"primary_category_name"</span>: <span class="hljs-string">"string"</span>,
+      <span class="hljs-attr">"metadata"</span>: <span class="hljs-string">"boolean"</span>,
+      <span class="hljs-attr">"captions"</span>: <span class="hljs-string">"boolean"</span>,
+      <span class="hljs-attr">"audio"</span>: <span class="hljs-string">"boolean"</span>,
+      <span class="hljs-attr">"video"</span>: <span class="hljs-string">"boolean"</span>,
+      <span class="hljs-attr">"thumbnail"</span>: <span class="hljs-string">"boolean"</span>,
+      <span class="hljs-attr">"posterart"</span>: <span class="hljs-string">"boolean"</span>,
+      <span class="hljs-attr">"video_replacement"</span>: <span class="hljs-string">"boolean"</span>,
+      <span class="hljs-attr">"delta_replacement"</span>: <span class="hljs-string">"boolean"</span>,
+      <span class="hljs-attr">"metadata_replacement"</span>: <span class="hljs-string">"boolean"</span>
+    }
+  ]
+}
+</code></pre> </body>
+                  </html>
+                  <!-- </div> -->
+                </section>
+              </div>
+            </div>
+          </div>
+          <div class="doc-row no-margin">
+            <div class="doc-copy doc-separator">
+              <a class="powered-by" href="https://sourcey.com/spectacle">Documentation by
+                <span>Spectacle</span>
+              </a>
+            </div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </body>
+</html>
