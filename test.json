@@ -27,9 +27,9 @@
           {
             "name": "interval",
             "in": "path",
-            "description": "Interval has to be a integer and valid values are between 1-920hrs.",
+            "description": "Interval has to be a integer and valid values are between 1-1000hrs.",
             "example": "interval=24",
-            "type": "string"
+            "type": "number"
           },
           {
             "name": "partner_id",
